@@ -50,3 +50,49 @@
 #section-1 h1 {
   font-size: 2em;
 }
+
+.custom-navbar {
+  background-color: #282c34;
+}
+
+.cards-container {
+  margin-top: 6em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cards-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.cards-container a:hover {
+  color: #282c34;
+  transition: 0.5s;
+}
+
+.custom_card {
+  background-color: #282c34;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1em;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #fff 0px 0px 10px;
+}
+
+#Home {
+  background-color: #806f49;
+  min-height: 100vh;
+}
+
+#Home h1 {
+  margin-top: 2em;
+  font-size: 3em;
+  color: #fff;
+}

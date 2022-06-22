@@ -1,12 +1,18 @@
-import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import Noticias from "./components/Noticias";
+import HomePage from "./pages/HomePage";
+import Personaje from "./pages/Personaje";
+
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <Noticias></Noticias>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/personaje/:id" element={<Personaje />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
