@@ -8,19 +8,23 @@ function Tarjeta() {
   useEffect(() => {
     allCharacters(setCharacters);
   }, []);
-  return characters.results.map((character) => (
-    <Card className="custom_card" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="" />
-      <Card.Body>
-        <Card.Title>{character.name}</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-  ));
+  return (
+    <>
+      {characters !== null
+      ? characters.map((character) => (
+      <Card className="custom_card">
+        <Card.Img variant="top" src={character.image} />
+        <Card.Body>
+          <Card.Title>{character.name}</Card.Title>
+          
+          <Button href={`/character/${character.id}`} variant="secondary">More details</Button>
+        </Card.Body>
+      </Card>
+      ))
+      : "Loading..."}
+    </>
+    
+  );
 }
 
 export default Tarjeta;

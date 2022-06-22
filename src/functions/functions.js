@@ -8,4 +8,11 @@ const allCharacters = async (state) => {
   state(response.data.results);
 };
 
-export { allCharacters };
+const characterById = async (state, id) => {
+  const response = await axios.get(
+    `https://rickandmortyapi.com/api/character/${id}`
+  );
+  state(response.data);
+}
+  
+export { allCharacters, characterById };

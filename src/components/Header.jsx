@@ -7,14 +7,14 @@ function Header() {
     <Navbar className="custom-navbar" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
-          <img
+          <svg
             alt=""
             src="../logo.svg"
             width="30"
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          Informatorio
+          Informatorio React 2022
         </Navbar.Brand>
       </Container>
     </Navbar>
