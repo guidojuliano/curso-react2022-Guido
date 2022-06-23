@@ -6,27 +6,26 @@ import { characterById } from "../functions/functions";
 
 function Personaje() {
   const [character, setCharacter] = useState(null);
-  const params  = useParams();
+  const params = useParams();
   useEffect(() => {
     characterById(params.id, setCharacter);
-  } , []);
+  }, []);
 
   return (
     <>
-      
+      <Header></Header>
       {character !== null ? (
         <div className="personaje-container" id="personaje">
-          <Header></Header>
-          <h1>Personaje con el id {params.id}</h1>
+          <h1>{character.name}</h1>
           <img src={character.image}></img>
-          <h2>{character.name}</h2>
-          <p>{character.status}</p>
-          <p>{character.species}</p>
-          <p>{character.type}</p>
+          <p>{character.description}</p>
+          <p>Status: {character.status}</p>
+          <p>Specie: {character.species}</p>
+          <p>Gender: {character.gender}</p>
         </div>
-      ) : ('Loading...')}
-      
-
+      ) : (
+        "Loading..."
+      )}
     </>
   );
 }

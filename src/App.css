@@ -51,7 +51,7 @@
   font-size: 2em;
 }
 
-#personaje {
+.personaje-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -59,6 +59,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 100vh;
+  padding: 1em;
+}
+
+.personaje-container h1 {
+  font-size: 2em;
+}
+
+.personaje-container img {
+  width: 30%;
+  border-radius: 50px;
 }
 
 .custom-navbar {
@@ -71,16 +81,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
   grid-auto-rows: minmax(100px, auto);
-}
-
-.cards-container a {
-  text-decoration: none;
-  color: white;
-}
-
-.cards-container a:hover {
-  color: #282c34;
-  transition: 0.5s;
 }
 
 .custom_card {
@@ -97,7 +97,7 @@
   margin-bottom: 2em;
 }
 
-.custom_card button{
+.custom_card button {
   margin-top: 15px;
 }
 
